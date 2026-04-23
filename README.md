@@ -1,48 +1,58 @@
-🚀 Job Portal – Full Stack MERN Project
+🚀 JOB PORTAL FULL STACK APPLICATION
+📌 PROJECT DESCRIPTION
 
-A scalable Job Portal Web Application built using the MERN Stack (MongoDB, Express, Node.js) with secure authentication and RESTful APIs.
+This is a Full Stack Job Portal Application built using the MERN stack (MongoDB, Express, Node.js).
+It provides secure authentication, user management, and job-related functionalities.
 
-This project demonstrates real-world backend architecture, authentication flow, and database integration.
+🎯 KEY OBJECTIVE
 
-🔥 Key Features
-👤 User Registration & Login System
-🔐 JWT Based Authentication
-🧾 Password Encryption using Bcrypt
-📡 RESTful API Architecture
-🗄️ MongoDB Database Integration
-⚡ Modular Backend Structure
-🚀 Ready for Deployment (Render/Vercel)
-🛠️ Tech Stack
+To build a real-world job portal system where users can:
 
-Backend:
-
+Register and login securely
+Access protected routes
+Interact with backend APIs
+Manage job-related data
+✨ FEATURES
+👤 User Management
+User Registration
+User Login
+Password Encryption (Bcrypt)
+🔐 Authentication
+JWT Token-based Authentication
+Protected API Routes
+🗄️ Database
+MongoDB Integration
+Mongoose Schema Design
+📡 Backend System
+RESTful API Design
+Modular Code Structure
+🛠️ TECHNOLOGY STACK
+Backend
 Node.js
 Express.js
 MongoDB
 Mongoose
 JWT
 Bcrypt.js
-
-Tools:
-
+Tools
 Git & GitHub
 Postman
 Render (Deployment)
-📁 Project Structure
+📁 PROJECT STRUCTURE
 server/
 │
 ├── models/
-│   └── User.js
+│     └── User.js
 │
 ├── routes/
-│   └── userRoutes.js
+│     └── userRoutes.js
 │
 ├── controllers/
 │
 ├── index.js
 │
 └── config/
-⚙️ Installation Guide
+⚙️ INSTALLATION STEPS
 1️⃣ Clone Repository
 git clone https://github.com/your-username/jobportal-fullstack.git
 2️⃣ Install Dependencies
@@ -55,28 +65,34 @@ Create .env file:
 MONGO_URL=your_mongodb_connection_string
 JWT_SECRET=jobportal123
 PORT=5000
-4️⃣ Run Project
+4️⃣ Run Server
 node index.js
-🌐 Deployment
-Platform	Status
-Backend (Render)	✅ Live
-Frontend (Vercel)	🔄 Optional
-📌 API Endpoints
-Auth Routes
+🌐 DEPLOYMENT
+Backend Hosting
+Render → Live API
+Frontend Hosting
+Vercel / Netlify (optional)
+📡 API ENDPOINTS
+Authentication Routes
 POST /api/register → Register User
 POST /api/login → Login User
-Job Routes
-GET /api/jobs → Get All Jobs
-⚠️ Common Issues Fixed
-❌ Module not found → Fixed import paths
-❌ Nodemon error → Use node index.js on Render
-❌ Case-sensitive file issue (User.js vs user.js)
-❌ MongoDB connection errors
-👨‍💻 Author
+❗ COMMON ISSUES FIXED
+Module not found errors (path issue)
+Case sensitivity (User.js vs user.js)
+Nodemon issue on Render
+Deployment start command issue
+👨‍💻 AUTHOR
 
 Sankalp Gupta
-Full Stack Developer (MERN)
+Full Stack Developer (MERN Stack)
 
-⭐ Project Goal
-
-To build a production-ready job portal system with proper authentication, backend structure, and deployment workflow.
+⭐ PROJECT HIGHLIGHTS
+Production-style backend architecture
+Secure authentication system
+Clean modular structure
+Deployment-ready project
+🚀 FUTURE IMPROVEMENTS
+Admin dashboard
+Job posting system
+Resume upload feature
+Advanced filtering system

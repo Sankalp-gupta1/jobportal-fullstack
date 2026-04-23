@@ -1,11 +1,39 @@
 const express = require("express");
 const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
 const User = require("../models/User");
 
 const router = express.Router();
 
+
+// SIGNUP ROUTE
 router.post("/signup", async (req, res) => {
-    router.post("/login", async (req, res) => {
+
+  const { name, email, password } = req.body;
+
+  const oldUser = await User.findOne({ email });
+
+  if (oldUser) {
+    return res.json({ msg: "Email already exists" });
+  }
+
+  const hashPass = await bcrypt.hash(password, 10);
+
+  const newUser = new User({
+    name,
+    email,
+    password: hashPass
+  });
+
+  await newUser.save();
+
+  res.json({ msg: "Signup Success" });
+
+});
+
+
+// LOGIN ROUTE
+router.post("/login", async (req, res) => {
 
   const { email, password } = req.body;
 
@@ -33,26 +61,5 @@ router.post("/signup", async (req, res) => {
   });
 
 });
-  const { name, email, password } = req.body;
-
-  const oldUser = await User.findOne({ email });
-
-  if (oldUser) {
-    return res.json({ msg: "Email already exists" });
-  }
-
-  const hashPass = await bcrypt.hash(password, 10);
-
-  const newUser = new User({
-    name,
-    email,
-    password: hashPass
-  });
-
-  await newUser.save();
-
-  res.json({ msg: "Signup Success" });
-});
 
 module.exports = router;
-const jwt = require("jsonwebtoken");
